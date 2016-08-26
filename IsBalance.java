@@ -1,3 +1,14 @@
+/*
+２分木が平衡木であるか否かを調べる関数を定義せよ。
+平衡木とは、どのノードの２つの部分木も、その高さの差が１以内であるような木と定義する。
+*/
+
+class TreeNode {
+  String data;
+  TreeNode left;
+  TreeNode right;
+}
+
 class TreeBalance {
   public static void main(String[] args) {
     TreeNode root = createTree();
@@ -51,9 +62,4 @@ class TreeBalance {
   }
 }
 
-class TreeNode {
-  String data;
-  TreeNode left;
-  TreeNode right;
-}
 
