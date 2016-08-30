@@ -1,6 +1,15 @@
 /*
 トポロジカルソート
+
+問題
 http://abc041.contest.atcoder.jp/tasks/abc041_d
+
+解説
+http://abc041.contest.atcoder.jp/data/abc/041/editorial.pdf
+
+wikiのトポロジカルソートの擬似コードを元に作成
+https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%9D%E3%83%AD%E3%82%B8%E3%82%AB%E3%83%AB%E3%82%BD%E3%83%BC%E3%83%88
+
 */
 
 
