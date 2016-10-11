@@ -26,4 +26,14 @@ class UnionFindForests{
     		}
     	}
 
+        bool same(ll x, ll y){
+            if(parents[x] == parents[y]){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        
+
 }
