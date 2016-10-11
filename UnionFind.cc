@@ -1,10 +1,8 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-
-
-#define ll long long 
-
+#define ll long long
+using namespace std;
 
 class UnionFindForests{
     public:
@@ -17,7 +15,7 @@ class UnionFindForests{
     		}
     	}
 
-    	void find(ll x){
+    	ll find(ll x){
     		if(parents[x] == x){
     			return x;
     		}else{
@@ -48,5 +46,10 @@ class UnionFindForests{
                 ranks[root_y]++;
             }
         }
+};
 
+int main(){
+    UnionFindForests uf = UnionFindForests(10);
+    return 0;
 }
+
