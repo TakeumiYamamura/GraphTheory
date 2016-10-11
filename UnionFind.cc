@@ -6,24 +6,24 @@ using namespace std;
 
 class UnionFindForests{
     public:
-    	vector<ll> parents, ranks;
-    	UnionFindForests(ll size){
-    		for (ll i = 0; i < size; ++i)
-    		{
-    			parents.push_back(i);
-    			ranks.push_back(0);
-    		}
-    	}
+        vector<ll> parents, ranks;
+        UnionFindForests(ll size){
+            for (ll i = 0; i < size; ++i)
+            {
+                parents.push_back(i);
+                ranks.push_back(0);
+            }
+        }
 
-    	ll find(ll x){
-    		if(parents[x] == x){
-    			return x;
-    		}else{
-    			//　一度根をたどった場合変を直接根に貼り直してる。
+        ll find(ll x){
+            if(parents[x] == x){
+                return x;
+            }else{
+                //　一度根をたどった場合変を直接根に貼り直してる。
                 //pass compression(経路圧縮)
-    			parents[x] = find(parents[x]);
-    		}
-    	}
+                parents[x] = find(parents[x]);
+            }
+        }
 
         bool same(ll x, ll y){
             if(parents[x] == parents[y]){
