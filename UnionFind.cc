@@ -13,7 +13,7 @@ class UnionFindForests{
     		for (ll i = 0; i < size; ++i)
     		{
     			parents.push_back(i);
-    			rank.push_back(0);
+    			ranks.push_back(0);
     		}
     	}
 
@@ -22,6 +22,7 @@ class UnionFindForests{
     			return x;
     		}else{
     			//　一度根をたどった場合変を直接根に貼り直してる。
+                //pass compression(経路圧縮)
     			parents[x] = find(parents[x]);
     		}
     	}
@@ -34,6 +35,18 @@ class UnionFindForests{
             }
         }
 
-        
+        void unite(ll x, ll y){
+            ll root_x = find(x);
+            ll root_y = find(y);
+            if (ranks[root_x] > ranks[root_y])
+            {
+                parents[root_y] = root_x;
+            }else if(ranks[root_x] < ranks[root_y]){
+                parents[root_x] = root_y;
+            }else if(ranks[root_x] == ranks[root_y]){
+                parents[root_x] = root_y;
+                ranks[root_y]++;
+            }
+        }
 
 }
